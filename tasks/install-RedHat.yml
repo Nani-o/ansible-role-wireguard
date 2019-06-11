@@ -1,0 +1,11 @@
+---
+- name: "Install | Configure epel-release"
+  yum:
+    name: epel-release
+    state: latest
+
+- name: "Install | Configure yum repo"
+  template:
+    src: "wireguard.repo.j2"
+    dest: "/etc/yum.repos.d/wireguard.repo"
+...

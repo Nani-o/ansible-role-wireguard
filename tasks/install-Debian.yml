@@ -1,0 +1,6 @@
+---
+- name: "Install | Configure apt repository"
+  apt_repository:
+    repo: "{{ wireguard_repo }}"
+    update_cache: True
+...

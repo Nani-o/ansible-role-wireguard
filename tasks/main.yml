@@ -1,0 +1,15 @@
+---
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags:
+    - wireguard
+    - wireguard_install
+- import_tasks: install-{{ ansible_os_family }}.yml
+  tags:
+    - wireguard
+    - wireguard_install
+- import_tasks: packages.yml
+  tags:
+    - wireguard
+    - wireguard_install
+...

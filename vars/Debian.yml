@@ -1,0 +1,6 @@
+---
+wireguard_repo: deb http://deb.debian.org/debian/ unstable main
+wireguard_packages:
+  - wireguard
+...
+
